@@ -404,20 +404,20 @@ const favoritePlanet = (planetStr) => {
  *   earnMoney
  *
  */
-class Person {
-  constructor(name, money, age, gender) {
-    this.name = name;
-    this.money = money;
-    this.age = age;
-    this.gender = gender;
-  }
-  spendMoney(amount) {
-    return this.money -= amount;
-  }
-  earnMoney(amount) {
-    return this.money += amount;
-  }
+function Person(name, money, age, gender) {
+  this.name = name;
+  this.money = money;
+  this.age = age;
+  this.gender = gender;
 }
+Person.prototype.spendMoney = function(amount) {
+  return this.money -= amount;
+};
+
+Person.prototype.earnMoney = function(amount) {
+  return this.money += amount;
+};
+
 /* Step 28
  *
  * Define a function named "purchaseLaptop" that takes
@@ -583,12 +583,14 @@ SolarSystem.prototype.removePlanet = function (planet) {
  *   marries
  *
  */
-class PrincessLeia extends Person{
-  constructor(name, money, age, gender) {
-    super(name, money, age, gender);
-    this.isInTrouble = null;
-  }
+function PrincessLeia(name, money, age, gender) {
+  Person.call(this, name, money, age, gender);
+  this.isInTrouble = null;
 }
+PrincessLeia.prototype = Object.create(Person.prototype, {
+  constructor : PrincessLeia
+});
+
 PrincessLeia.prototype.shootsGun = function() {
   this.isInTrouble = false;
   return "Leia shoots her gun wildly";
@@ -679,10 +681,50 @@ Stapler.prototype.staplePapers = function(numOfPapers) {
  *   addDiscovery
  *
  */
+function Scientist(name, money, age, gender) {
+  Person.call(this, name, money, age, gender);
+  this.disciplines = [];
+  this.discoveries = [];
+}
 
+Scientist.prototype = Object.create(Person.prototype, {
+  constructor : Scientist
+});
+
+Scientist.prototype.addDiscipline = function(newDiscp) {
+  this.disciplines.push(newDiscp);
+  return this.disciplines;
+};
+
+Scientist.prototype.checkDiscipline = function(disciple) {
+  if (this.disciplines.indexOf(disciple) !== -1) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+Scientist.prototype.addDiscovery = function(discovery) {
+  this.discoveries.push(discovery);
+  let retStr = 'I discovered ';
+  if (this.discoveries.length === 1) {
+    retStr += `${this.discoveries[0]}.`;
+    return retStr;
+  } else if (this.discoveries.length === 2) {
+    retStr += `${this.discoveries[0]} and ${this.discoveries[1]}.`;
+    return retStr;
+  } else {
+    retStr += `${this.discoveries[0]}, `;
+    for (var i = 1; i < this.discoveries.length - 1; i++) {
+      retStr += `${this.discoveries[i]}, `;
+    }
+    retStr += `and ${this.discoveries[this.discoveries.length - 1]}.`;
+    return retStr;
+  }
+};
 
 /* Step 36
- *
+ *B
  * Define an ES5 class named "BankAccount" that has properties
  * "balance" and "owner." Add a method "withdraw" that allows
  * the owner to remove money from the account and add it to
