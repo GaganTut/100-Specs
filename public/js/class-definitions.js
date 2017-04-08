@@ -66,8 +66,11 @@ const club_name = "Fight Club";
  *   male    => "male"
  *   unknown => undefined
  */
-
-
+const gender = {
+  female : "female",
+  male : "male",
+  unknown : undefined
+};
 /* Step 10
  *
  *
