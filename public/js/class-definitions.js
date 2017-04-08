@@ -743,16 +743,27 @@ Scientist.prototype.addDiscovery = function(discovery) {
  *   rob
  *
  */
-/*function BankAccount(balance, owner) {
+function BankAccount(balance, owner) {
   this.balance = balance;
   this.owner = owner;
 }
 
 BankAccount.prototype.withdraw = function(amount, owner) {
   if (this.owner === owner) {
-
+    this.balance -= amount;
+    owner.money += amount;
   }
-};*/
+};
+
+BankAccount.prototype.deposit = function(amount, owner) {
+  owner.money -= amount;
+  this.balance += amount;
+};
+
+BankAccount.prototype.rob = function(amount, anyPerson) {
+  this.balance -= amount;
+  anyPerson.money += amount;
+};
 
 /* Step 37
  *
