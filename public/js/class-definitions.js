@@ -1059,7 +1059,7 @@ let george = new Animal("Monkey", "male");
 let nemo = new Animal("Fish", "male");
 
 // Create 2 different vehicles
-var civic;
+var civic = new Vehicle('Honda', 'Civic');
 var forte;
 
 // Create 2 shapes with different numbers of sides
