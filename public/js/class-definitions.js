@@ -957,7 +957,7 @@ class Vehicle {
  */
 class Shape {
   constructor(sides) {
-    if (sides <= 3 || typeof sides !== "number") {
+    if (sides < 3 || typeof sides !== "number") {
       this.sides = null;
     } else {
       this.sides = sides;
@@ -1161,7 +1161,29 @@ Vehicle.prototype.drive = function(streetName) {
  * Any other number => "Could not determine type"
  *
  */
-
+Shape.prototype.getType = function() {
+  console.log(this.sides);
+  switch(this.sides) {
+    case 3:
+      return 'triangle';
+    case 4:
+      return 'quadrilateral';
+    case 5:
+      return 'pentagon';
+    case 6 :
+      return 'hexagon';
+    case 7 :
+      return 'heptagon';
+    case 8 :
+      return 'octagon';
+    case 9 :
+      return 'nonagon';
+    case 10:
+      return 'decagon';
+    default:
+      return 'Could not determine type';
+  }
+};
 
 /* Step 84
  *
