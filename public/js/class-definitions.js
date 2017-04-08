@@ -404,8 +404,20 @@ const favoritePlanet = (planetStr) => {
  *   earnMoney
  *
  */
-
-
+class Person {
+  constructor(name, money, age, gender) {
+    this.name = name;
+    this.money = money;
+    this.age = age;
+    this.gender = gender;
+  }
+  spendMoney(amount) {
+    return this.money -= amount;
+  }
+  earnMoney(amount) {
+    return this.money += amount;
+  }
+}
 /* Step 28
  *
  * Define a function named "purchaseLaptop" that takes
