@@ -1321,8 +1321,8 @@ var notWarmOrColdAnimal = myDuck.isWarmBlooded();
  * and assign the values to each variable below.
  *
  */
-var streetDriving;
-var forwardDriving;
+var streetDriving = civic.drive('Woodlawn Dr.');
+var forwardDriving = forte.drive(543);
 
 
  /* Step 93
