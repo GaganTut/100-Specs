@@ -348,8 +348,14 @@ const browseURL = (urlString) => {
  * @return {String}
  *
  */
-
-
+const listLivingOrgClass = () => {
+  let htmlFormat = '<ul>';
+  for(let i = 0; i < livingOrganismClassification.length; i++) {
+    htmlFormat += `<li>${livingOrganismClassification[i]}</li>`;
+  }
+  htmlFormat += '</ul>';
+  return htmlFormat;
+};
 /* Step 26
  *
  * Define a function named "favoritePlanet" that
