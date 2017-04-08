@@ -448,8 +448,13 @@ const purchaseLaptop = (lapTopStr) => {
  * @return {Bool}
  *
  */
-
-
+const canTalkAbout = (clubName) => {
+  if (clubName === club_name) {
+    return false;
+  } else {
+    return true;
+  }
+};
 /* Step 30
  *
  * Define an ES5 class named "Pen" with a property for
