@@ -247,8 +247,14 @@ const scmList = ["git", "svn", "mercurial", "bazaar", "cvs"];
  *                  "Golden"
  *
  */
-
-
+const beers = {
+  IPA : "Ale",
+  Lager : "Strong",
+  Heffeweisen : "German",
+  Stout : ["Thick", "Dark"],
+  Porter : "Bitter",
+  Ale: ["Light", "Golden"]
+};
 /* Step 20
  *
  * Define a function named 'sahara_river'
