@@ -229,8 +229,7 @@ const livingOrganismClassification = ["Kingdom", "Phylum", "Class", "Order", "Fa
  * "cvs"
  *
  */
-
-
+const scmList = ["git", "svn", "mercurial", "bazaar", "cvs"];
 /* Step 19
  *
  * Define a literal object named "beers" with
