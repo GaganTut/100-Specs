@@ -310,8 +310,17 @@ const installLinux = (string) => {
  * @return {Bool when False, String when True}
  *
  */
-
-
+const drink = (beerName) => {
+  if (beers.hasOwnProperty(beerName)) {
+    if (Array.isArray(beers[beerName])) {
+      return `This ${beerName} is ${beers[beerName][0]} and ${beers[beerName][1]}.`;
+    } else {
+      return `This ${beerName} is ${beers[beerName]}.`;
+    }
+  } else {
+    return false;
+  }
+};
 /* Step 24
  *
  * Define a function named "browseURL" that takes
