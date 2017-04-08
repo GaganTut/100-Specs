@@ -1371,8 +1371,8 @@ var blackShoesSize10 = dressShoes.findShoes();
  * and assign the values to each variable below.
  *
  */
-var farTooTallAStory;
-var shortStory;
+var farTooTallAStory = singleStory.isATallStory(1);
+var shortStory = twoStory.isATallStory(5);
 
 
  /* Step 98
