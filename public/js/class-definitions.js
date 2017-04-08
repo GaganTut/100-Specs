@@ -583,6 +583,32 @@ SolarSystem.prototype.removePlanet = function (planet) {
  *   marries
  *
  */
+class PrincessLeia extends Person{
+  constructor(name, money, age, gender) {
+    super(name, money, age, gender);
+    this.isInTrouble = null;
+  }
+}
+PrincessLeia.prototype.shootsGun = function() {
+  this.isInTrouble = false;
+  return "Leia shoots her gun wildly";
+};
+
+PrincessLeia.prototype.getsInTrouble = function () {
+  this.isInTrouble = true;
+  return "Help me Obi-wan Kenobi, you're my only hope";
+};
+
+PrincessLeia.prototype.marries = function(loveInterest) {
+  if (loveInterest === "Han Solo") {
+    return true;
+  } else {
+    if (loveInterest === "Luke Skywalker") {
+      return "Gross!";
+    }
+    return false;
+  }
+};
 
 
 /* Step 34
