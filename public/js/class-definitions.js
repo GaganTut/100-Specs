@@ -35,8 +35,7 @@ const planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uran
  * each galilean moon of Jupiter
  *
  */
-
-
+const galilean_moons = ["Io", "Europa", "Ganymede", "Callisto"];
 /* Step 6 φ
  *
  * Declare a variable named "golden_ratio"
