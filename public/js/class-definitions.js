@@ -196,8 +196,12 @@ const DNA = ["nucleatides", "guanine", "adenine", "thymine", "cytosine"];
  * Surface      => 320
  *
  */
-
-
+const laptopCosts = {
+  MacBook : 1500,
+  Alienware : 2500,
+  HP : 499,
+  Surface : 320
+};
 /* Step 17
  *
  * Declare an array named "livingOrganismClassification"
@@ -212,7 +216,6 @@ const DNA = ["nucleatides", "guanine", "adenine", "thymine", "cytosine"];
  * "Species"
  *
  */
-
 
 /* Step 18
  *
