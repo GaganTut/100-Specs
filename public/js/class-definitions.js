@@ -743,7 +743,16 @@ Scientist.prototype.addDiscovery = function(discovery) {
  *   rob
  *
  */
+/*function BankAccount(balance, owner) {
+  this.balance = balance;
+  this.owner = owner;
+}
 
+BankAccount.prototype.withdraw = function(amount, owner) {
+  if (this.owner === owner) {
+
+  }
+};*/
 
 /* Step 37
  *
@@ -916,7 +925,12 @@ Scientist.prototype.addDiscovery = function(discovery) {
  * @param {string} species The animal species
  * @param {string} gender  male or female
  */
-
+class Animal {
+  constructor(species, gender) {
+    this.species = species;
+    this.gender = gender;
+  }
+}
 
 /**
  * Step 51
