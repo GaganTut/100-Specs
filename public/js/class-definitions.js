@@ -5,21 +5,21 @@
  * then set it's value to null;
  *
  */
-let unicorn = null;
+const unicorn = null;
 /* Step 2
  *
  * Declare a variable named "videogame_system"
  * then assign it to be the value of "Atari"
  *
  */
-let videogame_system = "Atari";
+const videogame_system = "Atari";
 /* Step 3
  *
  * Declare a variable named "sahara_animal"
  * and assign the value of sahara_animal to "The Addax"
  *
  */
-let sahara_animal = "The Addax";
+const sahara_animal = "The Addax";
 /* Step 4
  *
  * Declare a variable named "planets"
@@ -27,8 +27,7 @@ let sahara_animal = "The Addax";
  * each planet in our solar system, in order of distance from the sun
  * Capitalize the names.
  */
-
-
+const planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"];
 /* Step 5
  *
  * Declare a variable named "galilean_moons"
