@@ -1193,8 +1193,14 @@ Shape.prototype.getType = function() {
  * Return true if openBox opens the box, false otherwise.
  *
  */
-
-
+Box.prototype.openBox = function() {
+  if (!this.isOpen) {
+    this.isOpen = true;
+    return true;
+  } else {
+    return false;
+  }
+};
  /* Step 85
  *
  * Declare a Door method called openClose that opens the door
