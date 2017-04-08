@@ -5,15 +5,14 @@
  * then set it's value to null;
  *
  */
- let unicorn = null;
+let unicorn = null;
 /* Step 2
  *
  * Declare a variable named "videogame_system"
  * then assign it to be the value of "Atari"
  *
  */
-
-
+let videogame_system = "Atari";
 /* Step 3
  *
  * Declare a variable named "sahara_animal"
