@@ -1162,7 +1162,6 @@ Vehicle.prototype.drive = function(streetName) {
  *
  */
 Shape.prototype.getType = function() {
-  console.log(this.sides);
   switch(this.sides) {
     case 3:
       return 'triangle';
@@ -1290,10 +1289,9 @@ Meal.prototype.containsJunkFood = function() {
   for (let i = 0; i < this.foods.length; i++) {
     if (junkFood.indexOf(this.foods[i]) !== -1) {
       return true;
-    } else {
-      return false;
     }
   }
+  return false;
 };
 
  /* Steps 91 to 100
@@ -1401,5 +1399,6 @@ var cookieMonsterBlocked = gingerbread.swipedByCookieMonster('Tuesday');
  * and assign the values to each variable below.
  *
  */
-var badForYou;
-var goodForYou;
+var hugeMeal = new Meal(['burger', 'ice cream', 'chips', 'salad', 'pizza']);
+var badForYou = hugeMeal.containsJunkFood();
+var goodForYou = dinner.containsJunkFood();
