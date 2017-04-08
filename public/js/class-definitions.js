@@ -375,8 +375,13 @@ const listLivingOrgClass = () => {
  * @return {String}
  *
  */
-
-
+const favoritePlanet = (planetStr) => {
+  if(planets.indexOf(planetStr) !== -1) {
+    return `I'm from ${planetStr}, but I wish I could go to ${planets[Math.floor(Math.random() * planets.length)]}.`;
+  } else {
+    return `${planetStr} is not a planet!`;
+  }
+};
 /* Step 27
  *
  * Define a class named "Person" that has properties for
