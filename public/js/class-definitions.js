@@ -1056,7 +1056,7 @@ class Meal {
 
 // Create 2 different species of animals
 let george = new Animal("Monkey", "male");
-var nemo;
+let nemo = new Animal("Fish", "male");
 
 // Create 2 different vehicles
 var civic;
