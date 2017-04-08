@@ -475,7 +475,13 @@ const canTalkAbout = (clubName) => {
  *   write
  *
  */
+function Pen(color) {
+  this.color = color;
+}
 
+Pen.prototype.write = function(msgStr) {
+  return `${this.color}: ${msgStr}`;
+};
 
 /* Step 31
  *
