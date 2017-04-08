@@ -286,8 +286,13 @@ const addNumbers = (x, y) => x + y;
  * @return {Bool}
  *
  */
-
-
+const installLinux = (string) => {
+  if (linuxFlavors.indexOf(string) === -1) {
+    return false;
+  } else {
+    return true;
+  }
+};
 /* Step 23
  *
  * Define a function named "drink" that takes
