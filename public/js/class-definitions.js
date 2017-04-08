@@ -274,8 +274,7 @@ const sahara_river = () => 'Nile River';
  * @return {Number}
  *
  */
-
-
+const addNumbers = (x, y) => x + y;
 /* Step 22
  *
  * Define a function named "installLinux"
