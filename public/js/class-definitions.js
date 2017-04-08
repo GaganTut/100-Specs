@@ -171,8 +171,7 @@ const rainbow = {
  * "Bieber Linux"
  *
  */
-
-
+const linuxFlavors = ["Gentoo", "Fedora", "Debian", "Slackware", "Red Hat", "Bieber Linux"];
 /* Step 15
  *
  * Declare an array named "DNA" with the
