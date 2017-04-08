@@ -1331,8 +1331,8 @@ var forwardDriving = forte.drive(543);
  * and assign the values to each variable below.
  *
  */
-var decagon;
-var polygon;
+var decagon = new Shape(10).getType();
+var polygon = new Shape(Infinity).getType();
 
 
 /* Step 94
