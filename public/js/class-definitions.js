@@ -332,8 +332,13 @@ const drink = (beerName) => {
  * @return {String if true else return false}
  *
  */
-
-
+const browseURL = (urlString) => {
+  if(browsers.hasOwnProperty(urlString)) {
+    return browsers[urlString];
+  } else {
+    return false;
+  }
+};
 /* Step 25
  *
  * Define a function named "listLivingOrgClass" that
