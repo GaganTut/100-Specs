@@ -997,7 +997,12 @@ class Door {
  * @param {number} size  The shoe size
  * @param {string} color The shoe color
  */
-
+class Shoe {
+  constructor(size, colors) {
+    this.size = size;
+    this.color = colors;
+  }
+}
 
 /**
  * Step 56
