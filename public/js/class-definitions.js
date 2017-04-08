@@ -478,7 +478,6 @@ const canTalkAbout = (clubName) => {
 function Pen(color) {
   this.color = color;
 }
-
 Pen.prototype.write = function(msgStr) {
   return `${this.color}: ${msgStr}`;
 };
@@ -509,8 +508,23 @@ Pen.prototype.write = function(msgStr) {
  *   grow
  *
  */
+function Garden(plantsTotal) {
+  this.plantsTotal = plantsTotal;
+  this.isWatered = false;
+}
 
+Garden.prototype.water = function() {
+  this.isWatered = true;
+};
 
+Garden.prototype.grow = function() {
+  if (this.isWatered) {
+    this.plantsTotal ++;
+    this.isWatered = false;
+  } else {
+    return false;
+  }
+};
 /* Step 32
  *
  * Define an ES5 class named "SolarSystem" with a property
