@@ -429,7 +429,13 @@ class Person {
  * @return {String}
  *
  */
-
+const purchaseLaptop = (lapTopStr) => {
+  if (laptopCosts.hasOwnProperty(lapTopStr)) {
+    return String(laptopCosts[lapTopStr]);
+  } else {
+    return -1;
+  }
+};
 
 /* Step 29
  *
